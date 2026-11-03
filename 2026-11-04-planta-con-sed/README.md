@@ -2,7 +2,7 @@
 
 **El proyecto de fin de semana · miércoles 4 de noviembre de 2026**
 
-Un sensor clavado en la maceta mide qué tan húmeda está la tierra. Tres LEDs te dicen cómo va (verde: bien, amarillo: pronto, rojo: tiene sed) y, cuando la tierra se seca, un buzzer hace un chirrido para que no se te olvide regarla.
+Un sensor clavado en la maceta mide qué tan húmeda está la tierra. Tres LEDs te dicen cómo va (verde: bien, amarillo: pronto, rojo: tiene sed) y, cuando la tierra se seca, un buzzer hace un pitido para que no se te olvide regarla.
 
 ## Para qué sirve en la escuela
 
@@ -74,7 +74,7 @@ Está en [`planta-con-sed/planta-con-sed.ino`](planta-con-sed/planta-con-sed.ino
 ## Cómo probarlo
 
 1. Al conectar el Nano, los tres LEDs se prenden uno tras otro y suena un pitido: el cableado de LEDs y buzzer está bien.
-2. Con la horquilla al aire debe quedar en **rojo** y chirrear.
+2. Con la horquilla al aire debe quedar en **rojo** y pitar.
 3. Métela en un vaso con agua: pasa a **verde** en un par de segundos.
 4. Sácala y sécala con un trapo: vuelve a rojo. Con la mano húmeda tocando las dos patas debería quedar en amarillo o verde.
 
@@ -91,4 +91,4 @@ Está en [`planta-con-sed/planta-con-sed.ino`](planta-con-sed/planta-con-sed.ino
 
 - **Riego automático:** agrega un relevador y una mini bomba de agua para que riegue sola cuando llegue a rojo.
 - **Gráfica para la feria:** usa el *Serial Plotter* del IDE para ver cómo se seca la tierra a lo largo del día.
-- **Modo noche:** agrega una fotorresistencia para que el chirrido no suene cuando está oscuro.
+- **Modo noche:** agrega una fotorresistencia para que el pitido no suene cuando está oscuro.

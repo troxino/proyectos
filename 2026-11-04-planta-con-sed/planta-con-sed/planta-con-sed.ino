@@ -2,7 +2,7 @@
 // El proyecto de fin de semana · Troxino.com
 //
 // Lectura del sensor: más alta = tierra más seca.
-// Verde: bien · Amarillo: pronto toca regar · Rojo + chirrido: tiene sed.
+// Verde: bien · Amarillo: pronto toca regar · Rojo + pitido: tiene sed.
 
 const int PIN_SENSOR_VCC = 7;   // alimenta el módulo solo al medir
 const int PIN_SENSOR     = A0;  // salida analógica del módulo (AO)
@@ -13,10 +13,10 @@ const int PIN_BUZZER     = 9;
 
 // Ajusta estos dos números con lo que veas en el Monitor Serie.
 const int UMBRAL_PRONTO = 550;  // de aquí para arriba: amarillo
-const int UMBRAL_SED    = 750;  // de aquí para arriba: rojo y chirrido
+const int UMBRAL_SED    = 750;  // de aquí para arriba: rojo y pitido
 
 const unsigned long CADA_LECTURA = 2000;   // ms entre lecturas
-const unsigned long CADA_AVISO   = 60000;  // ms entre chirridos mientras siga seca
+const unsigned long CADA_AVISO   = 60000;  // ms entre pitidos mientras siga seca
 
 unsigned long ultimoAviso = 0;
 bool teniaSed = false;
@@ -45,7 +45,7 @@ void mostrar(int led) {
 }
 
 // Tres pitidos cortos y agudos, como un grillo.
-void chirrido() {
+void pitido() {
   for (int i = 0; i < 3; i++) {
     tone(PIN_BUZZER, 2800, 60);
     delay(130);
@@ -78,9 +78,9 @@ void loop() {
   if (lectura >= UMBRAL_SED) {
     mostrar(LED_ROJO);
     unsigned long ahora = millis();
-    // Chirrea en cuanto se seca y luego cada minuto, no sin parar.
+    // Pita en cuanto se seca y luego cada minuto, no sin parar.
     if (!teniaSed || ahora - ultimoAviso >= CADA_AVISO) {
-      chirrido();
+      pitido();
       ultimoAviso = ahora;
     }
     teniaSed = true;
