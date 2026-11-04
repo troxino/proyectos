@@ -64,8 +64,8 @@ Corrientes: los LEDs rojo y amarillo quedan en unos 13 mA y el verde en unos 9 m
 4. **El buzzer:** pata − al riel −; pata + a una resistencia de 100 Ω y de ahí un cable a D9.
 5. **El sensor:** conecta la horquilla al módulo con su cablecito. Del módulo a la protoboard usa cables macho-hembra de 20 cm: VCC a D7, GND al riel − y AO a A0. DO se queda libre.
 6. **Sube el código:** conecta el Nano por USB, en el IDE elige *Arduino Nano* y el puerto. Si no sube, cambia el procesador a *ATmega328P (Old Bootloader)*.
-7. **Calibra:** abre el Monitor Serie a 9600. Anota la lectura con la horquilla al aire (seca, cerca de 1000) y metida en un vaso con agua (cerca de 300 a 400). Ajusta `UMBRAL_PRONTO` y `UMBRAL_SED` con tu tierra: seca vs. recién regada.
-8. **A la maceta:** clava la horquilla en la tierra hasta la mitad, sin mojar el módulo ni los cables. Listo: la planta ya te avisa.
+7. **Calibra:** abre el Monitor Serie a 9600. Anota la lectura con la horquilla al aire (seca, cerca de 1000) y metida en un vaso con agua (cerca de 300 a 400). Ajusta `UMBRAL_PRONTO` y `UMBRAL_SED` con tu tierra: seca vs. recién regada. Vuelve a subir el código para que tome los números nuevos.
+8. **A la maceta:** clava la horquilla en la tierra hasta la mitad, sin mojar el módulo ni los cables. Deja el Nano conectado por USB, a la laptop o a un cargador de celular, porque de ahí toma la corriente. Listo: la planta ya te avisa.
 
 ## Código
 
