@@ -7,3 +7,4 @@ Todas las piezas están en [troxino.com](https://troxino.com). ¿Dudas? Escríbe
 | Fecha | Proyecto | Nivel |
 |---|---|---|
 | 4 nov 2026 | [La planta que avisa cuando tiene sed](2026-11-04-planta-con-sed) | Principiante |
+| 11 nov 2026 | [El detector de lluvia](2026-11-11-detector-de-lluvia) | Principiante |
